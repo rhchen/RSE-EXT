@@ -2,7 +2,9 @@ package net.izhtw.rse.subsystems.device.emulator.qemu;
 
 import java.io.File;
 
+import net.izhtw.rse.subsystems.device.emulator.core.model.Emulator;
 import net.izhtw.rse.subsystems.device.emulator.qemu.adapter.QemuSubSystemConfigurationAdapterFactory;
+import net.izhtw.rse.subsystems.device.emulator.qemu.adapter.QemuSystemViewAdapterFactory;
 
 import org.eclipse.core.runtime.IAdapterManager;
 import org.eclipse.core.runtime.Platform;
@@ -29,6 +31,10 @@ public class QemuPlugin extends SystemBasePlugin {
 		super.start(context);
 		
 		IAdapterManager manager = Platform.getAdapterManager();
+		
+		QemuSystemViewAdapterFactory qemuSystemViewAdapterFactory = new QemuSystemViewAdapterFactory();
+		
+		manager.registerAdapters(qemuSystemViewAdapterFactory, Emulator.class);
 		
 		QemuSubSystemConfigurationAdapterFactory adapterFactory = new QemuSubSystemConfigurationAdapterFactory();
 		

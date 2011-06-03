@@ -9,10 +9,10 @@
             description="QEMU Emulator"
             icon="icons/full/obj16/monitor_obj.gif"
             iconlive="icons/full/obj16/systemlocallive_obj.gif"
-            id="net.izhtw.rse.subsystems.device.emulator.qemu.configuration1"
+            id="qemu.emulator"
             name="QEMU Emulator"
             priority="5000"
-            systemTypeIds="net.izhtw.rse.subsystems.device.emulator.core.systemType"
+            systemTypeIds="net.izhtw.rse.subsystems.device.emulator.core.systemType;org.eclipse.rse.systemtype.local"
             vendor="QEMU">
       </configuration>
    </extension>
