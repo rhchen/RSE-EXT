@@ -9,21 +9,29 @@ import org.eclipse.rse.ui.view.AbstractSystemViewAdapter;
 import org.eclipse.rse.ui.view.ISystemRemoteElementAdapter;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.views.properties.IPropertyDescriptor;
+import org.eclipse.ui.views.properties.PropertyDescriptor;
 
-public class EmulatorSystemViewAdapter extends AbstractSystemViewAdapter implements ISystemRemoteElementAdapter{
+import net.izhtw.rse.subsystems.device.emulator.core.EmulatorConstants;
+import net.izhtw.rse.subsystems.device.emulator.core.model.Emulator;
+import net.izhtw.rse.subsystems.device.emulator.ui.EmulatorPlugin;
+
+public abstract class EmulatorSystemViewAdapter extends AbstractSystemViewAdapter implements ISystemRemoteElementAdapter{
 
 	@Override
 	public String getText(Object element) {
-		// TODO Auto-generated method stub
-		return null;
+		return ((Emulator) element).getName();
 	}
 
 	@Override
 	public String getAbsoluteName(Object object) {
-		// TODO Auto-generated method stub
-		return null;
+		return getText(object);
 	}
 
+	@Override
+	public String getAbsoluteParentName(Object element) {
+		return null;
+	}
+	
 	@Override
 	public void addActions(SystemMenuManager menu,
 			IStructuredSelection selection, Shell parent, String menuGroup) {
@@ -33,74 +41,68 @@ public class EmulatorSystemViewAdapter extends AbstractSystemViewAdapter impleme
 
 	@Override
 	public ImageDescriptor getImageDescriptor(Object element) {
-		// TODO Auto-generated method stub
-		return null;
+		return EmulatorPlugin.getDefault().getImageDescriptor("ICON_QEMU");
 	}
 
 	@Override
 	public String getType(Object element) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Object getParent(Object element) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean hasChildren(IAdaptable element) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public Object[] getChildren(IAdaptable element, IProgressMonitor monitor) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	protected IPropertyDescriptor[] internalGetPropertyDescriptors() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	protected Object internalGetPropertyValue(Object key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getRemoteSubType(Object element) {
-		// TODO Auto-generated method stub
-		return null;
+		return EmulatorConstants.TYPE;
 	}
 
 	@Override
 	public String getRemoteType(Object element) {
-		// TODO Auto-generated method stub
+		return EmulatorConstants.TYPE;
+	}
+
+	@Override
+	public String getRemoteSubType(Object element) {
 		return null;
 	}
 
 	@Override
 	public String getRemoteTypeCategory(Object element) {
-		// TODO Auto-generated method stub
+		return EmulatorConstants.TYPE_CATEGORY;
+	}
+
+	@Override
+	public Object getParent(Object element) {
 		return null;
 	}
 
 	@Override
-	public String getSubSystemConfigurationId(Object element) {
-		// TODO Auto-generated method stub
+	public boolean hasChildren(IAdaptable element) {
+		return false;
+	}
+
+	@Override
+	public Object[] getChildren(IAdaptable element, IProgressMonitor monitor) {
 		return null;
 	}
 
 	@Override
-	public String getAbsoluteParentName(Object element) {
-		// TODO Auto-generated method stub
-		return null;
+	protected IPropertyDescriptor[] internalGetPropertyDescriptors() {
+		
+		PropertyDescriptor[] pd = new PropertyDescriptor[1];
+	
+		pd[0] = new PropertyDescriptor(EmulatorConstants.EMULATOR_PROPERTY_KEY_NAME, EmulatorConstants.EMULATOR_PROPERTY_KEY_NAME);
+		
+		pd[0].setDescription(EmulatorConstants.EMULATOR_PROPERTY_KEY_NAME_DESCRIPTION);
+		
+		return pd;
+	}
+
+	@Override
+	protected Object internalGetPropertyValue(Object key) {
+		
+		Emulator emulator = (Emulator) propertySourceInput;
+		
+		if(key.equals(EmulatorConstants.EMULATOR_PROPERTY_KEY_NAME)){
+			
+			return emulator.getName();
+			
+		}
+		
+		return EmulatorConstants.NOT_DEFINED;
 	}
 
 	@Override
@@ -123,4 +125,5 @@ public class EmulatorSystemViewAdapter extends AbstractSystemViewAdapter impleme
 		return null;
 	}
 
+	public abstract String getSubSystemConfigurationId(Object element);
 }

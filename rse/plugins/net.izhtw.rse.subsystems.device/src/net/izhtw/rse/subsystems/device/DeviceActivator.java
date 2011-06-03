@@ -5,6 +5,8 @@ import org.osgi.framework.BundleContext;
 
 public class DeviceActivator implements BundleActivator {
 
+	public static final String PLUGIN_ID = "net.izhtw.rse.subsystems.device";
+	
 	private static BundleContext context;
 
 	static BundleContext getContext() {

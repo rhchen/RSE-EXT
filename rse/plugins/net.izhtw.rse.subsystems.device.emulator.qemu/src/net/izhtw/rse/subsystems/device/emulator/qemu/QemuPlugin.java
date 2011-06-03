@@ -11,6 +11,8 @@ import org.osgi.framework.BundleContext;
 
 public class QemuPlugin extends SystemBasePlugin {
 
+	public static final String PLUGIN_ID = "net.izhtw.rse.subsystems.device.emulator.qemu";
+	
 	@Override
 	protected void initializeImageRegistry() {
 		

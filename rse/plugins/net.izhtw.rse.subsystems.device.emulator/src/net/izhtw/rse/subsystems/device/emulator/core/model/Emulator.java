@@ -19,6 +19,7 @@ public class Emulator implements IAdaptable{
 	/**
 	 * @see org.eclipse.core.runtime.IAdaptable#getAdapter(Class)
 	 */
+	@SuppressWarnings("rawtypes")
 	public Object getAdapter(Class adapter){
 		
    	    return Platform.getAdapterManager().getAdapter(this, adapter);	

@@ -5,6 +5,8 @@ import org.osgi.framework.BundleContext;
 
 public class SkyeyePlugin implements BundleActivator {
 
+	public static final String PLUGIN_ID = "net.izhtw.rse.subsystems.device.emulator.skyeye";
+	
 	private static BundleContext context;
 
 	static BundleContext getContext() {

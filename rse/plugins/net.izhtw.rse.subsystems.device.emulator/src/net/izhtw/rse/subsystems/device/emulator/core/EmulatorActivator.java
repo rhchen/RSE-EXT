@@ -5,6 +5,8 @@ import org.osgi.framework.BundleContext;
 
 public class EmulatorActivator implements BundleActivator {
 
+	public static final String PLUGIN_ID = "net.izhtw.rse.subsystems.device.emulator.core";
+	
 	private static BundleContext context;
 
 	static BundleContext getContext() {
