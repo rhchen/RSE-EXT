@@ -1,4 +1,4 @@
-package net.izhtw.rse.subsystems.device.emulator;
+package net.izhtw.rse.subsystems.device.emulator.core;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

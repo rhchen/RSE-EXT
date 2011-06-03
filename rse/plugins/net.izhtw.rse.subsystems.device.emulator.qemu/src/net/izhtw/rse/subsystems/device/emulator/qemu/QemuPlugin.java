@@ -9,7 +9,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.rse.ui.SystemBasePlugin;
 import org.osgi.framework.BundleContext;
 
-public class QemuActivator extends SystemBasePlugin {
+public class QemuPlugin extends SystemBasePlugin {
 
 	@Override
 	protected void initializeImageRegistry() {

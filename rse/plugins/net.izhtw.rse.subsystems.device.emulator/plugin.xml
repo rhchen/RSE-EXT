@@ -5,11 +5,9 @@
          point="org.eclipse.rse.core.systemTypes">
       <systemType
             description="Emulator"
-            icon="icons/full/obj16/monitor_obj.gif"
-            iconLive="icons/full/obj16/monitor_obj.gif"
-            id="net.izhtw.rse.subsystems.device.emulator.systemType"
+            id="net.izhtw.rse.subsystems.device.emulator.core.systemType"
             label="Emulator"
-            name="net.izhtw.rse.subsystems.device.emulator.systemType">
+            name="net.izhtw.rse.subsystems.device.emulator.core.systemType">
       </systemType>
    </extension>
 
