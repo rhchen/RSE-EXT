@@ -1,32 +1,16 @@
 package net.izhtw.rse.subsystems.device.emulator.skyeye;
 
-import org.osgi.framework.BundleActivator;
-import org.osgi.framework.BundleContext;
+import org.eclipse.rse.ui.SystemBasePlugin;
 
-public class SkyeyePlugin implements BundleActivator {
+public class SkyeyePlugin extends SystemBasePlugin {
 
 	public static final String PLUGIN_ID = "net.izhtw.rse.subsystems.device.emulator.skyeye";
+
+	@Override
+	protected void initializeImageRegistry() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
-	private static BundleContext context;
-
-	static BundleContext getContext() {
-		return context;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
-	 */
-	public void start(BundleContext bundleContext) throws Exception {
-		SkyeyePlugin.context = bundleContext;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
-	 */
-	public void stop(BundleContext bundleContext) throws Exception {
-		SkyeyePlugin.context = null;
-	}
-
 }

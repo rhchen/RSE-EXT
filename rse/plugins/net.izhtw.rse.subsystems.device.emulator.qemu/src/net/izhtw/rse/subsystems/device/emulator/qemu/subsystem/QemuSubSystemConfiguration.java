@@ -7,6 +7,7 @@ import org.eclipse.rse.core.subsystems.SubSystemConfiguration;
 import org.eclipse.rse.internal.connectorservice.local.LocalConnectorServiceManager;
 import org.eclipse.rse.internal.services.local.ILocalService;
 
+@SuppressWarnings("restriction")
 public class QemuSubSystemConfiguration extends SubSystemConfiguration {
 
 	public static final String SUBSYSTEM_CONFIGURATION_ID = "qemu.emulator";
@@ -16,12 +17,14 @@ public class QemuSubSystemConfiguration extends SubSystemConfiguration {
 		return new QemuSubSystem(conn, getConnectorService(conn));
 	}
 
+	@Override
 	public IConnectorService getConnectorService(IHost host)
 	{
 		return LocalConnectorServiceManager.getInstance().getConnectorService(host, getServiceImplType());
 	}
 	
-	public Class getServiceImplType()
+	@Override
+	public Class<ILocalService> getServiceImplType()
 	{
 		return ILocalService.class;
 	}
