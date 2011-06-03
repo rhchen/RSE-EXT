@@ -1,16 +1,16 @@
-package net.izhtw.rse.subsystems.device.emulator.ui;
+package net.izhtw.rse.subsystems.device.emulator.local;
 
 import java.io.File;
 
 import org.eclipse.rse.ui.SystemBasePlugin;
 
-public class EmulatorPlugin extends SystemBasePlugin {
+public class LocalEmulatorPlugin extends SystemBasePlugin {
 
-	public static final String PLUGIN_ID = "net.izhtw.rse.subsystems.device.emulator.ui";
+	public static final String PLUGIN_ID = "net.izhtw.rse.subsystems.device.emulator.local";
 	
-	private static EmulatorPlugin plugin = null;
+	private static LocalEmulatorPlugin plugin = null;
 
-	public EmulatorPlugin() {
+	public LocalEmulatorPlugin() {
 		super();
 		plugin = this;
 	}
@@ -30,7 +30,7 @@ public class EmulatorPlugin extends SystemBasePlugin {
 	 * Returns the shared instance.
 	 * @return the shared instance
 	 */
-	public static EmulatorPlugin getDefault() {
+	public static LocalEmulatorPlugin getDefault() {
 		return plugin;
 	}
 }

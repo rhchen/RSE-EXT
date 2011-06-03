@@ -1,4 +1,4 @@
-package net.izhtw.rse.subsystems.device.emulator.ui.adaptor;
+package net.izhtw.rse.subsystems.device.emulator.local.adapter;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -13,7 +13,7 @@ import org.eclipse.ui.views.properties.PropertyDescriptor;
 
 import net.izhtw.rse.subsystems.device.emulator.core.EmulatorConstants;
 import net.izhtw.rse.subsystems.device.emulator.core.model.Emulator;
-import net.izhtw.rse.subsystems.device.emulator.ui.EmulatorPlugin;
+import net.izhtw.rse.subsystems.device.emulator.local.LocalEmulatorPlugin;
 
 public abstract class EmulatorSystemViewAdapter extends AbstractSystemViewAdapter implements ISystemRemoteElementAdapter{
 
@@ -41,7 +41,7 @@ public abstract class EmulatorSystemViewAdapter extends AbstractSystemViewAdapte
 
 	@Override
 	public ImageDescriptor getImageDescriptor(Object element) {
-		return EmulatorPlugin.getDefault().getImageDescriptor("ICON_QEMU");
+		return LocalEmulatorPlugin.getDefault().getImageDescriptor("ICON_QEMU");
 	}
 
 	@Override

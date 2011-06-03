@@ -1,14 +1,11 @@
 package net.izhtw.rse.subsystems.device.emulator.qemu.subsystem;
 
-import org.eclipse.rse.core.model.IHost;
-import org.eclipse.rse.core.subsystems.IConnectorService;
-import org.eclipse.rse.core.subsystems.ISubSystem;
-import org.eclipse.rse.core.subsystems.SubSystemConfiguration;
-import org.eclipse.rse.internal.connectorservice.local.LocalConnectorServiceManager;
-import org.eclipse.rse.internal.services.local.ILocalService;
+import net.izhtw.rse.subsystems.device.emulator.local.subsystem.EmulatorSubSystemConfiguration;
 
-@SuppressWarnings("restriction")
-public class QemuSubSystemConfiguration extends SubSystemConfiguration {
+import org.eclipse.rse.core.model.IHost;
+import org.eclipse.rse.core.subsystems.ISubSystem;
+
+public class QemuSubSystemConfiguration extends EmulatorSubSystemConfiguration {
 
 	public static final String SUBSYSTEM_CONFIGURATION_ID = "qemu.emulator";
 	
@@ -17,15 +14,4 @@ public class QemuSubSystemConfiguration extends SubSystemConfiguration {
 		return new QemuSubSystem(conn, getConnectorService(conn));
 	}
 
-	@Override
-	public IConnectorService getConnectorService(IHost host)
-	{
-		return LocalConnectorServiceManager.getInstance().getConnectorService(host, getServiceImplType());
-	}
-	
-	@Override
-	public Class<ILocalService> getServiceImplType()
-	{
-		return ILocalService.class;
-	}
 }
