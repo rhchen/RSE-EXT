@@ -1,30 +1,42 @@
 package net.izhtw.rse.subsystems.device.emulator.qemu;
 
-import org.osgi.framework.BundleActivator;
+import java.io.File;
+
+import net.izhtw.rse.subsystems.device.emulator.qemu.adapter.QemuSubSystemConfigurationAdapterFactory;
+
+import org.eclipse.core.runtime.IAdapterManager;
+import org.eclipse.core.runtime.Platform;
+import org.eclipse.rse.ui.SystemBasePlugin;
 import org.osgi.framework.BundleContext;
 
-public class QemuActivator implements BundleActivator {
+public class QemuActivator extends SystemBasePlugin {
 
-	private static BundleContext context;
-
-	static BundleContext getContext() {
-		return context;
+	@Override
+	protected void initializeImageRegistry() {
+		
+		String path = getIconPath();
+		
+		String FULL_OBJ16 = "full" + File.separator + "obj16";
+		
+		putImageInRegistry("ICON_QEMU", path + FULL_OBJ16 + File.separator + "monitor_obj.gif");
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
-	 */
-	public void start(BundleContext bundleContext) throws Exception {
-		QemuActivator.context = bundleContext;
+	@Override
+	public void start(BundleContext context) throws Exception {
+		
+		super.start(context);
+		
+		IAdapterManager manager = Platform.getAdapterManager();
+		
+		QemuSubSystemConfigurationAdapterFactory adapterFactory = new QemuSubSystemConfigurationAdapterFactory();
+		
+		adapterFactory.registerWithManager(manager);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
-	 */
-	public void stop(BundleContext bundleContext) throws Exception {
-		QemuActivator.context = null;
+	@Override
+	public void stop(BundleContext context) throws Exception {
+		super.stop(context);
 	}
 
+	
 }
