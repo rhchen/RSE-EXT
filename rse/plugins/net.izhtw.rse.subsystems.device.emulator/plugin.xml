@@ -5,7 +5,6 @@
          point="org.eclipse.rse.core.systemTypes">
       <systemType
             description="Emulator"
-            enableOffline="true"
             icon="icons/full/obj16/monitor_obj.gif"
             iconLive="icons/full/obj16/monitor_obj.gif"
             id="net.izhtw.rse.subsystems.device.emulator.systemType"

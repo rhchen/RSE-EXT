@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.rse.core.subsystemConfigurations">
+      <configuration
+            category="users"
+            class="net.izhtw.rse.subsystems.device.emulator.qemu.subsystem.QemuSubSystemConfiguration"
+            description="QEMU Emulatordescription"
+            icon="icons/full/obj16/monitor_obj.gif"
+            iconlive="icons/full/obj16/systemlocallive_obj.gif"
+            id="net.izhtw.rse.subsystems.device.emulator.qemu.configuration1"
+            name="QEMU Emulator"
+            priority="5000"
+            systemTypeIds="net.izhtw.rse.subsystems.device.emulator.systemType"
+            vendor="QEMU">
+      </configuration>
+   </extension>
+
+</plugin>
