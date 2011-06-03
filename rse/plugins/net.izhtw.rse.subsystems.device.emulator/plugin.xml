@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.rse.core.systemTypes">
+      <systemType
+            description="Emulator"
+            enableOffline="true"
+            icon="icons/full/obj16/monitor_obj.gif"
+            iconLive="icons/full/obj16/monitor_obj.gif"
+            id="net.izhtw.rse.subsystems.device.emulator.systemType"
+            label="Emulator"
+            name="net.izhtw.rse.subsystems.device.emulator.systemType">
+      </systemType>
+   </extension>
+
+</plugin>

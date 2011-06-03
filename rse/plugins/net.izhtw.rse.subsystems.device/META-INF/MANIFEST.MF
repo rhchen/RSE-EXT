@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RSE Device
+Bundle-SymbolicName: net.izhtw.rse.subsystems.device;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: net.izhtw.rse.subsystems.device.DeviceActivator
+Bundle-Vendor: izhtw
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
