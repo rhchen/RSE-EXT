@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.rse.core.subsystemConfigurations">
+      <configuration
+            class="net.izhtw.rse.subsystems.processes.emulator.local.SubSystemConfiguration2"
+            description="description"
+            id="net.izhtw.rse.subsystems.processes.emulator.local.configuration2"
+            name="name"
+            vendor="vendor">
+      </configuration>
+   </extension>
+
+</plugin>
