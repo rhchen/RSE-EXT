@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Skyeye Emulator Process
+Bundle-SymbolicName: net.izhtw.rse.subsystems.processes.emulator.skyeye
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: net.izhtw.rse.subsystems.processes.emulator.skyeye.SkyeyePlugin
+Bundle-Vendor: izhtw
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
