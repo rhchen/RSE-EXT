@@ -32,9 +32,9 @@ public class QemuPlugin extends SystemBasePlugin {
 		
 		IAdapterManager manager = Platform.getAdapterManager();
 		
-		QemuSystemViewAdapterFactory qemuSystemViewAdapterFactory = new QemuSystemViewAdapterFactory();
+		QemuSystemViewAdapterFactory systemViewAdapterFactory = new QemuSystemViewAdapterFactory();
 		
-		manager.registerAdapters(qemuSystemViewAdapterFactory, Emulator.class);
+		manager.registerAdapters(systemViewAdapterFactory, Emulator.class);
 		
 		QemuSubSystemConfigurationAdapterFactory adapterFactory = new QemuSubSystemConfigurationAdapterFactory();
 		

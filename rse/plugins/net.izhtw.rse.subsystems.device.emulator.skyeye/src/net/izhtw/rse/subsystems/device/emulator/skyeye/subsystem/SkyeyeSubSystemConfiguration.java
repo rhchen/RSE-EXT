@@ -8,6 +8,8 @@ import net.izhtw.rse.subsystems.device.emulator.local.subsystem.EmulatorSubSyste
 public class SkyeyeSubSystemConfiguration extends
 		EmulatorSubSystemConfiguration {
 
+	public static final String SUBSYSTEM_CONFIGURATION_ID = "skyeye.emulator";
+	
 	@Override
 	public ISubSystem createSubSystemInternal(IHost conn) {
 		return new SkyeyeSubSystem(conn, getConnectorService(conn));

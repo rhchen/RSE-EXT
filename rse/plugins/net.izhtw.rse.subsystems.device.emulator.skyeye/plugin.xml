@@ -5,15 +5,15 @@
          point="org.eclipse.rse.core.subsystemConfigurations">
       <configuration
             category="users"
-            class="net.izhtw.rse.subsystems.device.emulator.qemu.subsystem.QemuSubSystemConfiguration"
-            description="Qemu Emulator"
+            class="net.izhtw.rse.subsystems.device.emulator.skyeye.subsystem.SkyeyeSubSystemConfiguration"
+            description="Skyeye Emulator"
             icon="icons/full/obj16/monitor_obj.gif"
             iconlive="icons/full/obj16/systemlocallive_obj.gif"
-            id="qemu.emulator"
-            name="Qemu Emulator"
+            id="skyeye.emulator"
+            name="Skyeye Emulator"
             priority="5000"
             systemTypeIds="net.izhtw.rse.subsystems.device.emulator.core.systemType;org.eclipse.rse.systemtype.local"
-            vendor="Qemu">
+            vendor="Skyeyevendor">
       </configuration>
    </extension>
 
