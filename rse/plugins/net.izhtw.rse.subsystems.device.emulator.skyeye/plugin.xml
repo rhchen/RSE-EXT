@@ -12,7 +12,7 @@
             id="skyeye.emulator"
             name="Skyeye Emulator"
             priority="5000"
-            systemTypeIds="net.izhtw.rse.subsystems.device.emulator.core.systemType;org.eclipse.rse.systemtype.local"
+            systemTypeIds="net.izhtw.rse.systemtype.skyeye;org.eclipse.rse.systemtype.local"
             vendor="Skyeyevendor">
       </configuration>
    </extension>

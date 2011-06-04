@@ -11,8 +11,8 @@
             iconlive="icons/full/obj16/processsubsystemlive_obj.gif"
             id="process.skyeye"
             name="Skyeye Process"
-            priority="5000"
-            systemTypeIds="net.izhtw.rse.subsystems.device.emulator.core.systemType;org.eclipse.rse.systemtype.local"
+            priority="6000"
+            systemTypeIds="net.izhtw.rse.systemtype.skyeye"
             vendor="Skyeye">
       </configuration>
    </extension>

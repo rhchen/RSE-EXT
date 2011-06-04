@@ -11,7 +11,8 @@
             iconlive="icons/full/obj16/processsubsystemlive_obj.gif"
             id="process.qemu"
             name="Qemu Process"
-            priority="5000"
+            priority="6000"
+            systemTypeIds="net.izhtw.rse.systemtype.qemu"
             vendor="Qemu">net.izhtw.rse.subsystems.device.emulator.core.systemType;org.eclipse.rse.systemtype.local
       </configuration>
    </extension>
