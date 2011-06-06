@@ -1,4 +1,6 @@
-package net.izhtw.rse.services.emulator;
+package net.izhtw.rse.services.emulator.job;
+
+import net.izhtw.rse.services.emulator.status.SpawnerStatus;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;

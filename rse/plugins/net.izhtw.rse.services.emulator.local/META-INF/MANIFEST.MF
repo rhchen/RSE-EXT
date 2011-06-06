@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Emulator Service Local
+Bundle-SymbolicName: net.izhtw.rse.services.emulator.local
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: net.izhtw.rse.services.emulator.local.LocalActivator
+Bundle-Vendor: izhtw
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.rse.services.local;bundle-version="2.1.202",
+ org.eclipse.rse.services;bundle-version="3.2.2",
+ net.izhtw.rse.services.emulator;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy

@@ -3,6 +3,8 @@ package net.izhtw.rse.services.emulator;
 import java.util.SortedSet;
 
 
+import net.izhtw.rse.services.emulator.handler.SpawnerProcessHandler;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.rse.services.clientserver.messages.SystemMessageException;
 import org.eclipse.rse.services.clientserver.processes.IHostProcess;
