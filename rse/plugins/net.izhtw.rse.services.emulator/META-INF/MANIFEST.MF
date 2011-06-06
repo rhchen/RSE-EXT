@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Emulator Service
+Bundle-SymbolicName: net.izhtw.rse.services.emulator
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: net.izhtw.rse.services.emulator.ServiceActivator
+Bundle-Vendor: izhtw
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.cdt.core;bundle-version="5.2.1",
+ org.eclipse.rse.services;bundle-version="3.2.2"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
