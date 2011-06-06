@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Emulator TCF
-Bundle-SymbolicName: net.izhtw.rse.subsystems.device.emulator.tcf;singleton:=true
+Bundle-SymbolicName: net.izhtw.rse.subsystems.emulator.tcf;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: net.izhtw.rse.subsystems.device.emulator.tcf.RemoteEmulatorPlugin
 Bundle-Vendor: izhtw

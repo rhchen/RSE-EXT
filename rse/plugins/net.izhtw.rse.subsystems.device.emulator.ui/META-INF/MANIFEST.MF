@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Emulator Local
-Bundle-SymbolicName: net.izhtw.rse.subsystems.device.emulator.local;singleton:=true
+Bundle-SymbolicName: net.izhtw.rse.subsystems.emulator.local;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: net.izhtw.rse.subsystems.device.emulator.local.LocalEmulatorPlugin
 Bundle-Vendor: izhtw
@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.rse.connectorservice.local;bundle-version="2.1.100",
  org.eclipse.rse.ui;bundle-version="3.1.102",
  org.eclipse.rse.core;bundle-version="3.1.102",
- net.izhtw.rse.subsystems.device.emulator.core;bundle-version="1.0.0"
+ net.izhtw.rse.subsystems.emulator.core;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: net.izhtw.rse.subsystems.device.emulator.local,
