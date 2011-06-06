@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Qemu
 Bundle-SymbolicName: net.izhtw.rse.subsystems.emulator.qemu;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: net.izhtw.rse.subsystems.device.emulator.qemu.QemuPlugin
+Bundle-Activator: net.izhtw.rse.subsystems.emulator.qemu.QemuPlugin
 Bundle-Vendor: izhtw
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui;bundle-version="3.6.2",

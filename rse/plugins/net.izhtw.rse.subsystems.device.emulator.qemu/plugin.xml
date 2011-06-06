@@ -5,7 +5,7 @@
          point="org.eclipse.rse.core.subsystemConfigurations">
       <configuration
             category="users"
-            class="net.izhtw.rse.subsystems.device.emulator.qemu.subsystem.QemuSubSystemConfiguration"
+            class="net.izhtw.rse.subsystems.emulator.qemu.subsystem.QemuSubSystemConfiguration"
             description="Qemu Emulator"
             icon="icons/full/obj16/monitor_obj.gif"
             iconlive="icons/full/obj16/systemlocallive_obj.gif"

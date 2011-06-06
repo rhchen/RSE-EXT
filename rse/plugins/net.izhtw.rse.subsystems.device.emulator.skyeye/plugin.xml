@@ -5,7 +5,7 @@
          point="org.eclipse.rse.core.subsystemConfigurations">
       <configuration
             category="users"
-            class="net.izhtw.rse.subsystems.device.emulator.skyeye.subsystem.SkyeyeSubSystemConfiguration"
+            class="net.izhtw.rse.subsystems.emulator.skyeye.subsystem.SkyeyeSubSystemConfiguration"
             description="Skyeye Emulator"
             icon="icons/full/obj16/monitor_obj.gif"
             iconlive="icons/full/obj16/systemlocallive_obj.gif"

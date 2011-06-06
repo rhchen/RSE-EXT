@@ -3,11 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Emulator Core
 Bundle-SymbolicName: net.izhtw.rse.subsystems.emulator.core;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: net.izhtw.rse.subsystems.device.emulator.core.EmulatorActivator
+Bundle-Activator: net.izhtw.rse.subsystems.emulator.core.EmulatorActivator
 Bundle-Vendor: izhtw
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.rse.core;bundle-version="3.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: net.izhtw.rse.subsystems.device.emulator.core,
- net.izhtw.rse.subsystems.device.emulator.core.model
+Export-Package: net.izhtw.rse.subsystems.emulator.core,
+ net.izhtw.rse.subsystems.emulator.core.model
