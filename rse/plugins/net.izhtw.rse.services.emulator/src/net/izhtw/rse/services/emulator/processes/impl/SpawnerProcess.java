@@ -19,12 +19,4 @@ public class SpawnerProcess extends AbstractHostProcess implements IHostProcess,
 		this.process = process;
 	}
 
-	public void exec() throws IOException{
-		
-		String[] envp = null;
-		String cmdarray = null;
-		File dir = null;
-		process = (Spawner) ProcessFactory.getFactory().exec(cmdarray, envp, dir);
-		
-	}
 }

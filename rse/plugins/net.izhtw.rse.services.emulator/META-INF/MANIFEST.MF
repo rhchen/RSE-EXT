@@ -7,6 +7,7 @@ Bundle-Activator: net.izhtw.rse.services.emulator.ServiceActivator
 Bundle-Vendor: izhtw
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.cdt.core;bundle-version="5.2.1",
+ org.eclipse.rse.core;bundle-version="3.1.102",
  org.eclipse.rse.services;bundle-version="3.2.2"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

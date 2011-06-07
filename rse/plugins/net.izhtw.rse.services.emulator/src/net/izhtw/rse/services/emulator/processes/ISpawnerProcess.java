@@ -4,6 +4,4 @@ import java.io.IOException;
 
 public interface ISpawnerProcess {
 
-	public void exec() throws IOException;
-	
 }

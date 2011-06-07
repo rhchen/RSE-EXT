@@ -4,6 +4,10 @@ import java.util.Collections;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.eclipse.rse.core.RSECorePlugin;
+import org.eclipse.rse.core.events.ISystemResourceChangeEvent;
+import org.eclipse.rse.core.events.ISystemResourceChangeListener;
+import org.eclipse.rse.core.model.ISystemRegistry;
 import org.eclipse.rse.services.clientserver.processes.HostProcessFilterImpl;
 import org.eclipse.rse.services.clientserver.processes.IHostProcess;
 import org.eclipse.rse.services.clientserver.processes.IHostProcessFilter;
@@ -12,13 +16,21 @@ import org.eclipse.rse.services.clientserver.processes.handlers.ProcessHandler;
 import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcess;
 import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcessFactory;
 
-public class SpawnerProcessHandler implements ProcessHandler {
+public class SpawnerProcessHandler implements ProcessHandler, ISystemResourceChangeListener {
 
-	SortedSet<SpawnerProcess> hm = Collections.synchronizedSortedSet(new TreeSet<SpawnerProcess>());
-	
+	private ISystemRegistry registry = null;
+
+	protected SortedSet<SpawnerProcess> spawnerProcessSet = Collections.synchronizedSortedSet(new TreeSet<SpawnerProcess>());
+
+	public SpawnerProcessHandler() {
+		super();
+		registry = RSECorePlugin.getTheSystemRegistry();
+		registry.addSystemResourceChangeListener(this);
+	}
+
 	@Override
 	public SortedSet<SpawnerProcess> lookupProcesses(IHostProcessFilter rpfs) throws Exception {
-		return hm;
+		return spawnerProcessSet;
 	}
 
 	@Override
@@ -39,8 +51,14 @@ public class SpawnerProcessHandler implements ProcessHandler {
 		
 		SpawnerProcess sp = SpawnerProcessFactory.getSpawnerProcess();
 		
-		hm.add(sp);
+		spawnerProcessSet.add(sp);
 		
 		return sp;
+	}
+
+	@Override
+	public void systemResourceChanged(ISystemResourceChangeEvent event) {
+		// TODO Auto-generated method stub
+		
 	}
 }

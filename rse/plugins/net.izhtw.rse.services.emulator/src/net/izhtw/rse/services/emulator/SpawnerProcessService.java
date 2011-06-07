@@ -2,11 +2,6 @@ package net.izhtw.rse.services.emulator;
 
 import java.util.SortedSet;
 
-
-import net.izhtw.rse.services.emulator.handler.SpawnerProcessHandler;
-import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcess;
-import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcessFactory;
-
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.rse.services.clientserver.messages.SystemMessageException;
 import org.eclipse.rse.services.clientserver.processes.IHostProcess;
@@ -14,6 +9,9 @@ import org.eclipse.rse.services.clientserver.processes.IHostProcessFilter;
 import org.eclipse.rse.services.clientserver.processes.handlers.ProcessHandler;
 import org.eclipse.rse.services.processes.AbstractProcessService;
 import org.eclipse.rse.services.processes.IProcessService;
+
+import net.izhtw.rse.services.emulator.handler.SpawnerProcessHandler;
+import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcess;
 
 public class SpawnerProcessService extends AbstractProcessService implements IProcessService{
 
@@ -24,6 +22,7 @@ public class SpawnerProcessService extends AbstractProcessService implements IPr
 		handler = new SpawnerProcessHandler();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IHostProcess[] listAllProcesses(IHostProcessFilter filter,
 			IProgressMonitor monitor) throws SystemMessageException {
@@ -34,13 +33,14 @@ public class SpawnerProcessService extends AbstractProcessService implements IPr
 		
 		try {
 			
-			SortedSet results = handler.lookupProcesses(filter);
+			SortedSet<SpawnerProcess> results = handler.lookupProcesses(filter);
 		
 			processes = (IHostProcess[]) results.toArray(new IHostProcess[results.size()]);
 		
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
+		
 		}
 		
 		return processes;
