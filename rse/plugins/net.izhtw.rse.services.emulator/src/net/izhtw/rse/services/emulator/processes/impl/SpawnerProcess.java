@@ -14,6 +14,11 @@ public class SpawnerProcess extends AbstractHostProcess implements IHostProcess,
 
 	private Spawner process = null;
 	
+	public SpawnerProcess(Spawner process) {
+		super();
+		this.process = process;
+	}
+
 	public void exec() throws IOException{
 		
 		String[] envp = null;

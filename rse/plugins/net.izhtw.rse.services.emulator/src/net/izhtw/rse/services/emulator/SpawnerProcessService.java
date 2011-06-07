@@ -4,6 +4,8 @@ import java.util.SortedSet;
 
 
 import net.izhtw.rse.services.emulator.handler.SpawnerProcessHandler;
+import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcess;
+import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcessFactory;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.rse.services.clientserver.messages.SystemMessageException;

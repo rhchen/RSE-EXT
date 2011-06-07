@@ -1,6 +1,6 @@
 package net.izhtw.rse.services.emulator.handler;
 
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -9,12 +9,15 @@ import org.eclipse.rse.services.clientserver.processes.IHostProcess;
 import org.eclipse.rse.services.clientserver.processes.IHostProcessFilter;
 import org.eclipse.rse.services.clientserver.processes.handlers.ProcessHandler;
 
+import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcess;
+import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcessFactory;
+
 public class SpawnerProcessHandler implements ProcessHandler {
 
-	SortedSet hm = new TreeSet();
+	SortedSet<SpawnerProcess> hm = Collections.synchronizedSortedSet(new TreeSet<SpawnerProcess>());
 	
 	@Override
-	public SortedSet lookupProcesses(IHostProcessFilter rpfs) throws Exception {
+	public SortedSet<SpawnerProcess> lookupProcesses(IHostProcessFilter rpfs) throws Exception {
 		return hm;
 	}
 
@@ -26,10 +29,18 @@ public class SpawnerProcessHandler implements ProcessHandler {
 		
 		rpfs.setPid("" + process.getPid());
 		
-		SortedSet results = lookupProcesses(rpfs);
+		SortedSet<SpawnerProcess> results = lookupProcesses(rpfs);
 		
 		if (results == null || results.size() == 0) return null;
 		else return (IHostProcess) results.first();
 	}
 
+	public SpawnerProcess exec(){
+		
+		SpawnerProcess sp = SpawnerProcessFactory.getSpawnerProcess();
+		
+		hm.add(sp);
+		
+		return sp;
+	}
 }
