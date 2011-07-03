@@ -1,6 +1,7 @@
 #!/bin/bash
 
 eclipseDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-SDK-3.7-linux-gtk.tar.gz"
+eclipseDeltaDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-3.7-delta-pack.zip"
 cdtDist="/home/rhchen/Downloads/eclipse/cdt/cdt-master-8.0.0-I201106081058.zip"
 rseDist="/home/rhchen/Downloads/eclipse/rse/RSE-SDK-3.3.zip"
 
@@ -25,12 +26,7 @@ srcDir=${workDir}/src
 mkdir -p ${srcDir}
 echo "srcdir is ${srcDir}"
 
-# Checkout source codes
-echo "Fetch Source Codes from github ....."
-
-cd ${srcDir}
-git clone git://github.com/rhchen/RSE-EXT.git
-
+# Unzip required plugins
 cd ${baseLocation}
 tar -xzvf ${eclipseDist}
 
@@ -44,3 +40,32 @@ cp -Rf rse/eclipse/plugins/* eclipse/plugins/
 cp -Rf rse/eclipse/features/* eclipse/features/
 rm -Rf rse
 
+unzip -o -d delta ${eclipseDeltaDist}
+cp -Rf delta/eclipse/plugins/* eclipse/plugins/
+cp -Rf delta/eclipse/features/* eclipse/features/
+rm -Rf delta
+
+# Checkout source codes
+echo "Fetch Source Codes from github ....."
+
+cd ${srcDir}
+git clone git://github.com/rhchen/RSE-EXT.git
+
+cp -Rf ${srcDir}/RSE-EXT/rse/* ${buildDirectory}
+cp -Rf ${srcDir}/RSE-EXT/releng/* ${buildDirectory}
+
+# Prepareing build environment
+export JAVA_HOME=/home/rhchen/works/tools/jrocket
+export PATH=$JAVA_HOME/bin:$PATH
+echo "JAVA_HOME = ${JAVA_HOME}"
+`java -version`
+
+cp ${buildDirectory}/plugins/net.izhtw.rse.releng/build.properties ${buildConfiguration}
+
+echo "Start build RSE-EXT"
+
+# Product Build
+#java -jar ${baseLocation}/eclipse/plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar -application org.eclipse.ant.core.antRunner -buildfile ${baseLocation}/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/scripts/productBuild/productBuild.xml -Dbuilder=${buildConfiguration}
+
+# Feature Build
+java -jar ${baseLocation}/eclipse/plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar -application org.eclipse.ant.core.antRunner -buildfile ${baseLocation}/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/scripts/build.xml -Dbuilder=${buildConfiguration}/
