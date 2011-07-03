@@ -1,13 +1,16 @@
 #!/bin/bash
 
-#eclipseDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-SDK-3.7-linux-gtk.tar.gz"
-eclipseDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-SDK-3.6.2-linux-gtk.tar.gz"
-#eclipseDeltaDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-3.7-delta-pack.zip"
-eclipseDeltaDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-3.6.2-delta-pack.zip"
-#cdtDist="/home/rhchen/Downloads/eclipse/cdt/cdt-master-8.0.0-I201106081058.zip"
-cdtDist="/home/rhchen/Downloads/eclipse/cdt/cdt-master-7.0.2.zip"
-#rseDist="/home/rhchen/Downloads/eclipse/rse/RSE-SDK-3.3.zip"
-rseDist="/home/rhchen/Downloads/eclipse/rse/RSE-SDK-3.2.2.zip"
+# Build for eclipse 3.6.2
+#eclipseDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-SDK-3.6.2-linux-gtk.tar.gz"
+#eclipseDeltaDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-3.6.2-delta-pack.zip"
+#cdtDist="/home/rhchen/Downloads/eclipse/cdt/cdt-master-7.0.2.zip"
+#rseDist="/home/rhchen/Downloads/eclipse/rse/RSE-SDK-3.2.2.zip"
+
+# Build for eclipse 3.7
+eclipseDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-SDK-3.7-linux-gtk.tar.gz"
+eclipseDeltaDist="/home/rhchen/Downloads/eclipse/eclipse/eclipse-3.7-delta-pack.zip"
+cdtDist="/home/rhchen/Downloads/eclipse/cdt/cdt-master-8.0.0-I201106081058.zip"
+rseDist="/home/rhchen/Downloads/eclipse/rse/RSE-SDK-3.3.zip"
 
 workDir="/home/rhchen/works/build/rse"
 rm -Rf ${workDir}
@@ -68,10 +71,11 @@ cp ${buildDirectory}/plugins/net.izhtw.rse.releng/build.properties ${buildConfig
 
 echo "Start build RSE-EXT"
 
-# Product Build
+# Product Build For Eclipse 3.7
 #java -jar ${baseLocation}/eclipse/plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar -application org.eclipse.ant.core.antRunner -buildfile ${baseLocation}/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/scripts/productBuild/productBuild.xml -Dbuilder=${buildConfiguration}
 
-# Feature Build
-#java -jar ${baseLocation}/eclipse/plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar -application org.eclipse.ant.core.antRunner -buildfile ${baseLocation}/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/scripts/build.xml -Dbuilder=${buildConfiguration}/
+# Feature Build For Eclipse 3.7
+java -jar ${baseLocation}/eclipse/plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar -application org.eclipse.ant.core.antRunner -buildfile ${baseLocation}/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/scripts/build.xml -Dbuilder=${buildConfiguration}/
 
-java -jar ${baseLocation}/eclipse/plugins/org.eclipse.equinox.launcher_1.1.1.R36x_v20101122_1400.jar -application org.eclipse.ant.core.antRunner -buildfile ${baseLocation}/eclipse/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/scripts/build.xml -Dbuilder=${buildConfiguration}/
+# Feature Build for Eclipse 3.6.2
+#java -jar ${baseLocation}/eclipse/plugins/org.eclipse.equinox.launcher_1.1.1.R36x_v20101122_1400.jar -application org.eclipse.ant.core.antRunner -buildfile ${baseLocation}/eclipse/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/scripts/build.xml -Dbuilder=${buildConfiguration}/
