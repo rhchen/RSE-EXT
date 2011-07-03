@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="net.izhtw.rse.subsystems.emulator.feature"
-      label="Emulator Feature"
+      id="net.izhtw.rse.subsystems.emulator.qemu.feature"
+      label="Qemu Feature"
       version="1.0.0.qualifier">
 
    <description url="http://www.example.com/description">
@@ -17,61 +17,34 @@
    </license>
 
    <includes
-         id="net.izhtw.rse.services.emulator.feature"
+         id="net.izhtw.rse.subsystems.emulator.feature"
          version="0.0.0"/>
 
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.rse.core" version="3.1.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui" version="3.6.2" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.views" version="3.5.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.rse.core" version="3.1.102" match="greaterOrEqual"/>
       <import plugin="org.eclipse.rse.services" version="3.2.2" match="greaterOrEqual"/>
       <import plugin="org.eclipse.rse.services.local" version="2.1.202" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.rse.connectorservice.local" version="2.1.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.rse.ui" version="3.1.102" match="greaterOrEqual"/>
       <import plugin="net.izhtw.rse.subsystems.emulator.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="net.izhtw.rse.subsystems.emulator.local" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.rse.subsystems.processes.local" version="2.1.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.rse.subsystems.processes.core" version="3.1.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.rse.connectorservice.local" version="2.1.100" match="greaterOrEqual"/>
+      <import plugin="net.izhtw.rse.subsystems.processes.emulator.local" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
-         id="net.izhtw.rse.subsystems.emulator.core"
+         id="net.izhtw.rse.subsystems.emulator.qemu"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="net.izhtw.rse.subsystems.emulator.local"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="net.izhtw.rse.subsystems.emulator.tcf"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="net.izhtw.rse.subsystems.processes.emulator.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="net.izhtw.rse.subsystems.processes.emulator.local"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="net.izhtw.rse.subsystems.processes.emulator.tcf"
+         id="net.izhtw.rse.subsystems.processes.emulator.qemu"
          download-size="0"
          install-size="0"
          version="0.0.0"
