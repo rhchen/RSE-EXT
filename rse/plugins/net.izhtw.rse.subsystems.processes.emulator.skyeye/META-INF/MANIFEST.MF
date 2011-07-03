@@ -5,7 +5,7 @@ Bundle-SymbolicName: net.izhtw.rse.subsystems.processes.emulator.skyeye;singleto
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: net.izhtw.rse.subsystems.processes.emulator.skyeye.SkyeyePlugin
 Bundle-Vendor: izhtw
-Require-Bundle: org.eclipse.core.runtime,
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.2",
  org.eclipse.ui;bundle-version="3.6.2",
  org.eclipse.rse.subsystems.processes.local;bundle-version="2.1.100",
  org.eclipse.rse.subsystems.processes.core;bundle-version="3.1.100",
