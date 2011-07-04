@@ -1,5 +1,7 @@
-package net.izhtw.rse.services.emulator.handler;
+package net.izhtw.rse.services.emulator.handler.impl;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -11,12 +13,12 @@ import org.eclipse.rse.core.model.ISystemRegistry;
 import org.eclipse.rse.services.clientserver.processes.HostProcessFilterImpl;
 import org.eclipse.rse.services.clientserver.processes.IHostProcess;
 import org.eclipse.rse.services.clientserver.processes.IHostProcessFilter;
-import org.eclipse.rse.services.clientserver.processes.handlers.ProcessHandler;
 
+import net.izhtw.rse.services.emulator.handler.ISpawnerProcessHandler;
 import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcess;
 import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcessFactory;
 
-public class SpawnerProcessHandler implements ProcessHandler, ISystemResourceChangeListener {
+public class SpawnerProcessHandler implements ISpawnerProcessHandler, ISystemResourceChangeListener {
 
 	private ISystemRegistry registry = null;
 
@@ -47,9 +49,9 @@ public class SpawnerProcessHandler implements ProcessHandler, ISystemResourceCha
 		else return (IHostProcess) results.first();
 	}
 
-	public SpawnerProcess exec(){
+	public SpawnerProcess exec(String cmd, String[] envp, File dir) throws IOException{
 		
-		SpawnerProcess sp = SpawnerProcessFactory.getSpawnerProcess();
+		SpawnerProcess sp = SpawnerProcessFactory.getSpawnerProcess(cmd, envp, dir);
 		
 		spawnerProcessSet.add(sp);
 		

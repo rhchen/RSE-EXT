@@ -8,22 +8,10 @@ import org.eclipse.cdt.utils.spawner.Spawner;
 
 public class SpawnerProcessFactory {
 
-	public static SpawnerProcess getSpawnerProcess(){
+	public static SpawnerProcess getSpawnerProcess(String cmd, String[] envp, File dir) throws IOException{
 		
-		String[] envp = null;
-		String cmd = null;
-		File dir = null;
+		Spawner process = (Spawner)ProcessFactory.getFactory().exec(cmd, envp, dir);
 		
-		try {
-			
-			Spawner process = (Spawner)ProcessFactory.getFactory().exec(cmd, envp, dir);
-		
-			return new SpawnerProcess(process);
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		return null;
+		return new SpawnerProcess(process);
 	}
 }

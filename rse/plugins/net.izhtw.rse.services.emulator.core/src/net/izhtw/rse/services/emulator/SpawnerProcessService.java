@@ -10,7 +10,7 @@ import org.eclipse.rse.services.clientserver.processes.handlers.ProcessHandler;
 import org.eclipse.rse.services.processes.AbstractProcessService;
 import org.eclipse.rse.services.processes.IProcessService;
 
-import net.izhtw.rse.services.emulator.handler.SpawnerProcessHandler;
+import net.izhtw.rse.services.emulator.handler.impl.SpawnerProcessHandler;
 import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcess;
 
 public class SpawnerProcessService extends AbstractProcessService implements IProcessService{
