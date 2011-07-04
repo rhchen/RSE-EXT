@@ -1,28 +1,34 @@
-package net.izhtw.rse.services.emulator.core;
+package net.izhtw.rse.services.emulator.core.services.impl;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.SortedSet;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.rse.services.clientserver.messages.SystemMessageException;
 import org.eclipse.rse.services.clientserver.processes.IHostProcess;
 import org.eclipse.rse.services.clientserver.processes.IHostProcessFilter;
-import org.eclipse.rse.services.clientserver.processes.handlers.ProcessHandler;
 import org.eclipse.rse.services.processes.AbstractProcessService;
-import org.eclipse.rse.services.processes.IProcessService;
 
 import net.izhtw.rse.services.emulator.core.handler.impl.SpawnerProcessHandler;
 import net.izhtw.rse.services.emulator.core.processes.impl.SpawnerProcess;
+import net.izhtw.rse.services.emulator.core.services.ISpawnerProcessService;
 
-public class SpawnerProcessService extends AbstractProcessService implements IProcessService{
+public class SpawnerProcessService extends AbstractProcessService implements ISpawnerProcessService{
 
-	protected ProcessHandler handler;
+	protected SpawnerProcessHandler handler;
 	
 	public SpawnerProcessService() {
 		super();
 		handler = new SpawnerProcessHandler();
 	}
 
-	@SuppressWarnings("unchecked")
+	public void forkProcess(String cmd, String[] envp, File dir) throws IOException{
+		
+		handler.exec(cmd, envp, dir);
+		
+	}
+	
 	@Override
 	public IHostProcess[] listAllProcesses(IHostProcessFilter filter,
 			IProgressMonitor monitor) throws SystemMessageException {
