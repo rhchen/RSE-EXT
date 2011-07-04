@@ -1,9 +1,9 @@
-package net.izhtw.rse.services.emulator.processes.impl;
+package net.izhtw.rse.services.emulator.core.processes.impl;
 
 import java.io.File;
 import java.io.IOException;
 
-import net.izhtw.rse.services.emulator.processes.ISpawnerProcess;
+import net.izhtw.rse.services.emulator.core.processes.ISpawnerProcess;
 
 import org.eclipse.cdt.utils.spawner.ProcessFactory;
 import org.eclipse.cdt.utils.spawner.Spawner;

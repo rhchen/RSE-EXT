@@ -1,4 +1,4 @@
-package net.izhtw.rse.services.emulator.status;
+package net.izhtw.rse.services.emulator.core.status;
 
 import org.eclipse.core.runtime.Status;
 

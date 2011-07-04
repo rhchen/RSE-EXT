@@ -33,7 +33,7 @@
       <import plugin="org.eclipse.rse.subsystems.processes.core" version="3.1.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.rse.connectorservice.local" version="2.1.100" match="greaterOrEqual"/>
       <import plugin="net.izhtw.rse.subsystems.processes.emulator.local" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.runtime" version="3.6.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.6.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin

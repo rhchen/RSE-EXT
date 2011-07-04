@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Emulator Service
 Bundle-SymbolicName: net.izhtw.rse.services.emulator.core
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: net.izhtw.rse.services.emulator.ServiceActivator
+Bundle-Activator: net.izhtw.rse.services.emulator.core.ServiceActivator
 Bundle-Vendor: izhtw
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
  org.eclipse.cdt.core;bundle-version="5.2.1",
@@ -11,9 +11,10 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
  org.eclipse.rse.services;bundle-version="3.2.2"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: net.izhtw.rse.services.emulator,
- net.izhtw.rse.services.emulator.handler,
- net.izhtw.rse.services.emulator.job,
- net.izhtw.rse.services.emulator.processes,
- net.izhtw.rse.services.emulator.processes.impl,
- net.izhtw.rse.services.emulator.status
+Export-Package: net.izhtw.rse.services.emulator.core,
+ net.izhtw.rse.services.emulator.core.handler,
+ net.izhtw.rse.services.emulator.core.handler.impl,
+ net.izhtw.rse.services.emulator.core.job,
+ net.izhtw.rse.services.emulator.core.processes,
+ net.izhtw.rse.services.emulator.core.processes.impl,
+ net.izhtw.rse.services.emulator.core.status

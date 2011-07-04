@@ -1,4 +1,4 @@
-package net.izhtw.rse.services.emulator.processes;
+package net.izhtw.rse.services.emulator.core.processes;
 
 import java.io.IOException;
 

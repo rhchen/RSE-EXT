@@ -1,4 +1,4 @@
-package net.izhtw.rse.services.emulator.handler.impl;
+package net.izhtw.rse.services.emulator.core.handler.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +14,9 @@ import org.eclipse.rse.services.clientserver.processes.HostProcessFilterImpl;
 import org.eclipse.rse.services.clientserver.processes.IHostProcess;
 import org.eclipse.rse.services.clientserver.processes.IHostProcessFilter;
 
-import net.izhtw.rse.services.emulator.handler.ISpawnerProcessHandler;
-import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcess;
-import net.izhtw.rse.services.emulator.processes.impl.SpawnerProcessFactory;
+import net.izhtw.rse.services.emulator.core.handler.ISpawnerProcessHandler;
+import net.izhtw.rse.services.emulator.core.processes.impl.SpawnerProcess;
+import net.izhtw.rse.services.emulator.core.processes.impl.SpawnerProcessFactory;
 
 public class SpawnerProcessHandler implements ISpawnerProcessHandler, ISystemResourceChangeListener {
 

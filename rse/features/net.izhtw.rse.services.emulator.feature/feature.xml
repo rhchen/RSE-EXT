@@ -22,7 +22,7 @@
       <import plugin="org.eclipse.rse.services" version="3.2.2" match="greaterOrEqual"/>
       <import plugin="org.eclipse.rse.services.local" version="2.1.202" match="greaterOrEqual"/>
       <import plugin="net.izhtw.rse.services.emulator.core" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.runtime" version="3.6.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.6.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
