@@ -4,11 +4,16 @@
    <extension
          point="org.eclipse.rse.core.subsystemConfigurations">
       <configuration
-            class="net.izhtw.rse.subsystems.processes.emulator.local.SubSystemConfiguration2"
-            description="description"
-            id="net.izhtw.rse.subsystems.processes.emulator.local.configuration2"
-            name="name"
-            vendor="vendor">
+            category="users"
+            class="net.izhtw.rse.subsystems.processes.emulator.local.subsystem.EmulatorProcessSubSystemConfiguration"
+            description="Local Process"
+            icon="icons/full/obj16/processsubsystem_obj.gif"
+            iconlive="icons/full/obj16/processsubsystemlive_obj.gif"
+            id="process.local"
+            name="Local Process"
+            priority="6000"
+            systemTypeIds="net.izhtw.rse.systemtype.qemu"
+            vendor="Local Process">
       </configuration>
    </extension>
 
