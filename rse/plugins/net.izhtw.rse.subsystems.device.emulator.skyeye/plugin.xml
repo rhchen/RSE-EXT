@@ -11,7 +11,7 @@
             iconlive="icons/full/obj16/systemlocallive_obj.gif"
             id="skyeye.emulator"
             name="Skyeye Emulator"
-            priority="5000"
+            priority="5001"
             systemTypeIds="net.izhtw.rse.systemtype.skyeye;org.eclipse.rse.systemtype.local"
             vendor="Skyeyevendor">
       </configuration>

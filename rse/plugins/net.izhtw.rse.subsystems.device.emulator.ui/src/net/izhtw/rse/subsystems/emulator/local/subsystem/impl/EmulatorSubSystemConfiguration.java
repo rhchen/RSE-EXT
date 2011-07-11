@@ -37,11 +37,6 @@ public abstract class EmulatorSubSystemConfiguration extends SubSystemConfigurat
 	}
 
 	@Override
-	public Class getServiceType() {
-		return IEmulatorService.class;
-	}
-
-	@Override
 	public IService getService(IHost host) {
 		
 		return getEmulatorService(host);

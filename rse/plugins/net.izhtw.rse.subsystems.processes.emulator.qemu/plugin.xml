@@ -13,7 +13,7 @@
             name="Qemu Process"
             priority="6000"
             systemTypeIds="net.izhtw.rse.systemtype.qemu"
-            vendor="Qemu Process">net.izhtw.rse.subsystems.device.emulator.core.systemType;org.eclipse.rse.systemtype.local
+            vendor="Qemu Process">
       </configuration>
    </extension>
 
