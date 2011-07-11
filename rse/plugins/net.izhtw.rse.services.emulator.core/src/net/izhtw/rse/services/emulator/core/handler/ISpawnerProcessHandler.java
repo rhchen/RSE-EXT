@@ -9,6 +9,10 @@ import org.eclipse.rse.services.clientserver.processes.handlers.ProcessHandler;
 
 public interface ISpawnerProcessHandler extends ProcessHandler{
 
+	public final static int COMMAND_CANCELED = 1;
+	public final static int ILLEGAL_COMMAND = -1;
+	public final static int OK = 0;
+	
 	public SpawnerProcess exec(String cmd, String[] envp, File dir) throws IOException;
 	
 }

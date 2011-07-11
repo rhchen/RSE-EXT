@@ -2,10 +2,12 @@ package net.izhtw.rse.services.emulator.core.handler.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Collections;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.eclipse.cdt.internal.core.ProcessClosure;
 import org.eclipse.rse.core.RSECorePlugin;
 import org.eclipse.rse.core.events.ISystemResourceChangeEvent;
 import org.eclipse.rse.core.events.ISystemResourceChangeListener;
@@ -18,8 +20,15 @@ import net.izhtw.rse.services.emulator.core.handler.ISpawnerProcessHandler;
 import net.izhtw.rse.services.emulator.core.processes.impl.SpawnerProcess;
 import net.izhtw.rse.services.emulator.core.processes.impl.SpawnerProcessFactory;
 
+/**
+ * Reference org.eclipse.cdt.core.CommandLauncher
+ */
 public class SpawnerProcessHandler implements ISpawnerProcessHandler, ISystemResourceChangeListener {
 
+	
+	
+	protected static final long DELAY = 50L;
+	
 	private ISystemRegistry registry = null;
 
 	protected SortedSet<SpawnerProcess> spawnerProcessSet = Collections.synchronizedSortedSet(new TreeSet<SpawnerProcess>());
@@ -58,6 +67,8 @@ public class SpawnerProcessHandler implements ISpawnerProcessHandler, ISystemRes
 		return sp;
 	}
 
+	
+	
 	@Override
 	public void systemResourceChanged(ISystemResourceChangeEvent event) {
 		// TODO Auto-generated method stub
