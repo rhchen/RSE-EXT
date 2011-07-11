@@ -17,4 +17,6 @@ Export-Package: net.izhtw.rse.services.emulator.core,
  net.izhtw.rse.services.emulator.core.job,
  net.izhtw.rse.services.emulator.core.processes,
  net.izhtw.rse.services.emulator.core.processes.impl,
+ net.izhtw.rse.services.emulator.core.services,
+ net.izhtw.rse.services.emulator.core.services.impl,
  net.izhtw.rse.services.emulator.core.status

@@ -13,7 +13,7 @@
             name="Skyeye Process"
             priority="6000"
             systemTypeIds="net.izhtw.rse.systemtype.skyeye"
-            vendor="Skyeye">
+            vendor="Skyeye Process">
       </configuration>
    </extension>
 
