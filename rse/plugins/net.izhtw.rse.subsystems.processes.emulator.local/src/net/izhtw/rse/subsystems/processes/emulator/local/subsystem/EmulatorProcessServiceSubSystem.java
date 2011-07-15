@@ -12,7 +12,7 @@ import org.eclipse.rse.subsystems.processes.core.subsystem.IRemoteProcessContext
 import org.eclipse.rse.subsystems.processes.servicesubsystem.IProcessServiceSubSystem;
 import org.eclipse.rse.subsystems.processes.servicesubsystem.ProcessServiceSubSystem;
 
-public class EmulatorProcessServiceSubSystem extends ProcessServiceSubSystem implements IProcessServiceSubSystem{
+public class EmulatorProcessServiceSubSystem extends ProcessServiceSubSystem implements IEmulatorProcessServiceSubSystem{
 
 	public EmulatorProcessServiceSubSystem(IHost host,
 			IConnectorService connectorService,

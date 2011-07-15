@@ -12,7 +12,7 @@ import org.eclipse.rse.subsystems.processes.core.subsystem.IHostProcessToRemoteP
 import org.eclipse.rse.subsystems.processes.local.LocalProcessSubSystemConfiguration;
 import org.eclipse.rse.subsystems.processes.servicesubsystem.ProcessServiceSubSystem;
 
-public class EmulatorProcessSubSystemConfiguration extends LocalProcessSubSystemConfiguration {
+public class EmulatorProcessSubSystemConfiguration extends LocalProcessSubSystemConfiguration implements IEmulatorProcessServiceSubSystemConfiguration{
 
 	@Override
 	public ISubSystem createSubSystemInternal(IHost host) {
