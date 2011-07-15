@@ -1,7 +1,10 @@
 package net.izhtw.rse.services.emulator.local;
 
-import org.eclipse.rse.internal.services.local.processes.LocalProcessService;
+import org.eclipse.rse.services.processes.IProcessService;
 
-public class LocalSpawnerProcessService extends LocalProcessService {
+import net.izhtw.rse.services.emulator.core.services.ISpawnerProcessService;
+import net.izhtw.rse.services.emulator.core.services.impl.SpawnerProcessService;
+
+public class LocalSpawnerProcessService extends SpawnerProcessService implements ISpawnerProcessService{
 
 }
