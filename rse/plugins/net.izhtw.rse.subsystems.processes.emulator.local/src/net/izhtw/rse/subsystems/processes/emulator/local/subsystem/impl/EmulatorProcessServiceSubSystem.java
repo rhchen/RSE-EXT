@@ -1,4 +1,6 @@
-package net.izhtw.rse.subsystems.processes.emulator.local.subsystem;
+package net.izhtw.rse.subsystems.processes.emulator.local.subsystem.impl;
+
+import net.izhtw.rse.subsystems.processes.emulator.local.subsystem.IEmulatorProcessServiceSubSystem;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.rse.core.model.IHost;

@@ -2,7 +2,7 @@ package net.izhtw.rse.subsystems.processes.emulator.skyeye.subsystem;
 
 import net.izhtw.rse.services.emulator.local.LocalSpawnerProcessService;
 import net.izhtw.rse.subsystems.processes.emulator.local.adapter.EmulatorProcessAdapter;
-import net.izhtw.rse.subsystems.processes.emulator.local.subsystem.EmulatorProcessSubSystemConfiguration;
+import net.izhtw.rse.subsystems.processes.emulator.local.subsystem.impl.EmulatorProcessSubSystemConfiguration;
 
 import org.eclipse.rse.core.model.IHost;
 import org.eclipse.rse.core.subsystems.ISubSystemConfiguration;

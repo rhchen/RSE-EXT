@@ -5,7 +5,7 @@
          point="org.eclipse.rse.core.subsystemConfigurations">
       <configuration
             category="users"
-            class="net.izhtw.rse.subsystems.processes.emulator.local.subsystem.EmulatorProcessSubSystemConfiguration"
+            class="net.izhtw.rse.subsystems.processes.emulator.local.subsystem.impl.EmulatorProcessSubSystemConfiguration"
             description="Local Process"
             icon="icons/full/obj16/processsubsystem_obj.gif"
             iconlive="icons/full/obj16/processsubsystemlive_obj.gif"
