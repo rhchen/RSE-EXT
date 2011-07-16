@@ -21,7 +21,6 @@ public class SkyeyeSubSystem extends SubSystem implements IEmulatorSubSystem{
 	@Override
 	public void initializeSubSystem(IProgressMonitor monitor)
 			throws SystemMessageException {
-		// TODO Auto-generated method stub
 		super.initializeSubSystem(monitor);
 		getEmulatorService().initService(monitor);
 	}

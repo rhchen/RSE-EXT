@@ -30,21 +30,4 @@ public class ProcessActivator implements BundleActivator {
 		ProcessActivator.context = null;
 	}
 
-	/**
-     * Find the first IProcessServiceSubSystem service associated with the host.
-     * 
-     * @param host the connection 
-     * @return shell service subsystem, or <code>null</code> if not found.
-     */
-    public static IProcessServiceSubSystem getEmulatorProcessServiceSubSystem(IHost host) {
-        if (host == null)
-            return null;
-        ISubSystem[] subSystems = host.getSubSystems();
-        for (int i = 0; subSystems != null && i < subSystems.length; i++) {
-            if (subSystems[i] instanceof IProcessServiceSubSystem) {
-                return (IProcessServiceSubSystem)subSystems[i];
-            }
-        }
-        return null;
-    }
 }

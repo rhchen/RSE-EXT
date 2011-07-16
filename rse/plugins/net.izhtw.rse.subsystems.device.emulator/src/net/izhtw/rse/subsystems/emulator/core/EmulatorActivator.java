@@ -31,19 +31,4 @@ public class EmulatorActivator implements BundleActivator {
 		EmulatorActivator.context = null;
 	}
 
-
-	public static ISubSystem getEmulatorSubSystem(IHost host, Class<ISubSystem> clazz) {
-        
-		if (host == null) return null;
-        
-		ISubSystem[] subSystems = host.getSubSystems();
-        
-		for (int i = 0; subSystems != null && i < subSystems.length; i++) {
-        	
-        	if(clazz.isInstance(subSystems[i])) return clazz.cast(subSystems[i]);
-        	
-        }
-		
-        return null;
-    }
 }
