@@ -1,4 +1,4 @@
-package net.izhtw.rse.subsystems.emulator.local.subsystem;
+package net.izhtw.rse.emulator.core.subsystems;
 
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
 

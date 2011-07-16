@@ -1,7 +1,7 @@
 package net.izhtw.rse.subsystems.emulator.qemu.subsystem;
 
+import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystemConfiguration;
 import net.izhtw.rse.services.emulator.core.services.IQemuService;
-import net.izhtw.rse.subsystems.emulator.local.subsystem.IEmulatorSubSystemConfiguration;
 import net.izhtw.rse.subsystems.emulator.local.subsystem.impl.EmulatorSubSystemConfiguration;
 
 import org.eclipse.rse.core.model.IHost;

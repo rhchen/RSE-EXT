@@ -1,6 +1,6 @@
 package net.izhtw.rse.subsystems.processes.emulator.local.subsystem.impl;
 
-import net.izhtw.rse.subsystems.processes.emulator.local.subsystem.IEmulatorProcessServiceSubSystem;
+import net.izhtw.rse.emulator.core.subsystems.IEmulatorProcessServiceSubSystem;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.rse.core.model.IHost;
@@ -11,7 +11,6 @@ import org.eclipse.rse.services.processes.IProcessService;
 import org.eclipse.rse.subsystems.processes.core.subsystem.IHostProcessToRemoteProcessAdapter;
 import org.eclipse.rse.subsystems.processes.core.subsystem.IRemoteProcess;
 import org.eclipse.rse.subsystems.processes.core.subsystem.IRemoteProcessContext;
-import org.eclipse.rse.subsystems.processes.servicesubsystem.IProcessServiceSubSystem;
 import org.eclipse.rse.subsystems.processes.servicesubsystem.ProcessServiceSubSystem;
 
 public class EmulatorProcessServiceSubSystem extends ProcessServiceSubSystem implements IEmulatorProcessServiceSubSystem{

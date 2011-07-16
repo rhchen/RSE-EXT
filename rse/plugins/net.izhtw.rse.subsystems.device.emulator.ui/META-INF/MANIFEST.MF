@@ -21,5 +21,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: net.izhtw.rse.subsystems.emulator.local,
  net.izhtw.rse.subsystems.emulator.local.adapter,
- net.izhtw.rse.subsystems.emulator.local.subsystem,
  net.izhtw.rse.subsystems.emulator.local.subsystem.impl

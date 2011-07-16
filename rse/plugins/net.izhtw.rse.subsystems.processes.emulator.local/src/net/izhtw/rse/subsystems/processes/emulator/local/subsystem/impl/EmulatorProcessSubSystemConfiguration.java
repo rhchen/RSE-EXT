@@ -1,8 +1,8 @@
 package net.izhtw.rse.subsystems.processes.emulator.local.subsystem.impl;
 
+import net.izhtw.rse.emulator.core.subsystems.IEmulatorProcessServiceSubSystemConfiguration;
 import net.izhtw.rse.services.emulator.local.LocalSpawnerProcessService;
 import net.izhtw.rse.subsystems.processes.emulator.local.adapter.EmulatorProcessAdapter;
-import net.izhtw.rse.subsystems.processes.emulator.local.subsystem.IEmulatorProcessServiceSubSystemConfiguration;
 
 import org.eclipse.rse.core.model.IHost;
 import org.eclipse.rse.core.subsystems.ISubSystem;

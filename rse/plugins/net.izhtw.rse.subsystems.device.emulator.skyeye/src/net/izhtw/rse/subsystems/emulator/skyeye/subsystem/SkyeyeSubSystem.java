@@ -1,7 +1,7 @@
 package net.izhtw.rse.subsystems.emulator.skyeye.subsystem;
 
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
-import net.izhtw.rse.subsystems.emulator.local.subsystem.IEmulatorSubSystem;
+import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystem;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.rse.core.model.IHost;
