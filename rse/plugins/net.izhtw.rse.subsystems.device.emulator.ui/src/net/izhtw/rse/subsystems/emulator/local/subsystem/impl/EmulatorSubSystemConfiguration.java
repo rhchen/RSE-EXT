@@ -3,8 +3,8 @@ package net.izhtw.rse.subsystems.emulator.local.subsystem.impl;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.izhtw.rse.emulator.core.services.IEmulatorService;
 import net.izhtw.rse.services.emulator.core.services.AbstractEmulatorService;
-import net.izhtw.rse.services.emulator.core.services.IEmulatorService;
 import net.izhtw.rse.subsystems.emulator.local.subsystem.IEmulatorSubSystemConfiguration;
 
 import org.eclipse.rse.core.model.IHost;

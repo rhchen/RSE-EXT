@@ -1,4 +1,4 @@
-package net.izhtw.rse.services.emulator.core.services;
+package net.izhtw.rse.emulator.core.services;
 
 import org.eclipse.rse.services.IService;
 

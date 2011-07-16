@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Emulator Core
+Bundle-SymbolicName: net.izhtw.rse.emulator.core
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: net.izhtw.rse.emulator.core.CoreActivator
+Bundle-Vendor: izhtw
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.rse.services;bundle-version="3.2.100"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: net.izhtw.rse.emulator.core,
+ net.izhtw.rse.emulator.core.services
