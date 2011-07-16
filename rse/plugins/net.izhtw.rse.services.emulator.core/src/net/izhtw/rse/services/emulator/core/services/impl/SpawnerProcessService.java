@@ -11,6 +11,7 @@ import org.eclipse.rse.services.clientserver.processes.IHostProcessFilter;
 import org.eclipse.rse.services.processes.AbstractProcessService;
 
 import net.izhtw.rse.services.emulator.core.handler.impl.SpawnerProcessHandler;
+import net.izhtw.rse.services.emulator.core.processes.ISpawnerProcess;
 import net.izhtw.rse.services.emulator.core.processes.impl.SpawnerProcess;
 import net.izhtw.rse.services.emulator.core.services.ISpawnerProcessService;
 

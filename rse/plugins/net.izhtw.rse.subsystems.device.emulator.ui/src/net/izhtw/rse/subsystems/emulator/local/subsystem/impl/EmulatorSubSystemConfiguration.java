@@ -3,6 +3,7 @@ package net.izhtw.rse.subsystems.emulator.local.subsystem.impl;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystemConfiguration;
 import net.izhtw.rse.services.emulator.core.services.AbstractEmulatorService;
@@ -52,5 +53,9 @@ public abstract class EmulatorSubSystemConfiguration extends SubSystemConfigurat
 		return service;
 	}
 	
-	
+	@Override
+	public IEmulatorProcessService getEmulatorProcessService(IHost host) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
