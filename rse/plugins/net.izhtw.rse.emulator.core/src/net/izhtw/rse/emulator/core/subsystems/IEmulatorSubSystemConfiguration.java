@@ -10,5 +10,5 @@ public interface IEmulatorSubSystemConfiguration extends ISubSystemConfiguration
 
 	public IEmulatorService getEmulatorService(IHost host);
 	
-	public IEmulatorProcessService getEmulatorProcessService(IHost host);
+	public IEmulatorProcessService[] getEmulatorProcessService(IHost host);
 }

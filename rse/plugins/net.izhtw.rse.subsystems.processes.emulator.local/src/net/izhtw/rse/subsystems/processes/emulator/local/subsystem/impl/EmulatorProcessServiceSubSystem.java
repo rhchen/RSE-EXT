@@ -1,5 +1,6 @@
 package net.izhtw.rse.subsystems.processes.emulator.local.subsystem.impl;
 
+import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorProcessServiceSubSystem;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -51,4 +52,8 @@ public class EmulatorProcessServiceSubSystem extends ProcessServiceSubSystem imp
 		super.uninitializeSubSystem(monitor);
 	}
 
+	@Override
+	public IEmulatorProcessService getProcessService(){
+		return (IEmulatorProcessService) super.getProcessService();
+	}
 }

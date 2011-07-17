@@ -1,13 +1,17 @@
 package net.izhtw.rse.subsystems.emulator.local.subsystem.impl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
+import net.izhtw.rse.emulator.core.subsystems.IEmulatorProcessServiceSubSystem;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystemConfiguration;
 import net.izhtw.rse.services.emulator.core.services.AbstractEmulatorService;
 
+import org.eclipse.rse.core.RSECorePlugin;
 import org.eclipse.rse.core.model.IHost;
 import org.eclipse.rse.core.subsystems.IConnectorService;
 import org.eclipse.rse.core.subsystems.ISubSystem;
@@ -54,8 +58,24 @@ public abstract class EmulatorSubSystemConfiguration extends SubSystemConfigurat
 	}
 	
 	@Override
-	public IEmulatorProcessService getEmulatorProcessService(IHost host) {
-		// TODO Auto-generated method stub
-		return null;
+	public IEmulatorProcessService[] getEmulatorProcessService(IHost host) {
+		
+		List matches = new ArrayList();
+		
+		ISubSystem[] ssa = RSECorePlugin.getTheSystemRegistry().getServiceSubSystems(host, IEmulatorProcessService.class);
+		
+		for(ISubSystem ss : ssa){
+			
+			if(ss instanceof IEmulatorProcessServiceSubSystem){
+				
+				IEmulatorProcessService eps = ((IEmulatorProcessServiceSubSystem) ss).getProcessService();
+				
+				matches.add(eps);
+				
+			}
+		}
+		
+		return (IEmulatorProcessService[])matches.toArray(new IEmulatorProcessService[matches.size()]);
+		
 	}
 }

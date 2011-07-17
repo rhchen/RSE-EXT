@@ -1,5 +1,6 @@
 package net.izhtw.rse.subsystems.emulator.skyeye.subsystem;
 
+import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystem;
 
@@ -13,9 +14,17 @@ public class SkyeyeSubSystem extends SubSystem implements IEmulatorSubSystem{
 
 	protected IEmulatorService _service = null;
 	
+	protected IEmulatorProcessService _processserice = null;
+	
 	protected SkyeyeSubSystem(IHost host, IConnectorService connectorService, IEmulatorService service) {
 		super(host, connectorService);
 		_service = service;
+	}
+	
+	protected SkyeyeSubSystem(IHost host, IConnectorService connectorService, IEmulatorService service, IEmulatorProcessService processserice) {
+		super(host, connectorService);
+		_service = service;
+		_processserice = processserice;
 	}
 
 	@Override
@@ -28,6 +37,10 @@ public class SkyeyeSubSystem extends SubSystem implements IEmulatorSubSystem{
 	@Override
 	public IEmulatorService getEmulatorService() {
 		return this._service;
+	}
+	
+	public IEmulatorProcessService getEmulatorProcessService() {
+		return this._processserice;
 	}
 
 }

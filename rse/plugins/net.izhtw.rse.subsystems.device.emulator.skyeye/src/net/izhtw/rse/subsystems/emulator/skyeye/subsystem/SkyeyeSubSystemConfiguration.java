@@ -18,6 +18,8 @@ public class SkyeyeSubSystemConfiguration extends EmulatorSubSystemConfiguration
 		
 		IEmulatorService service = this.getEmulatorService(conn);
 		
+		IEmulatorProcessService[] processservice = this.getEmulatorProcessService(conn);
+		
 		SkyeyeSubSystem sss = new SkyeyeSubSystem(conn, getConnectorService(conn), service);
 		
 		return sss;
