@@ -19,6 +19,7 @@ import org.eclipse.rse.core.subsystems.SubSystemConfiguration;
 import org.eclipse.rse.internal.connectorservice.local.LocalConnectorServiceManager;
 import org.eclipse.rse.internal.services.local.ILocalService;
 import org.eclipse.rse.services.IService;
+import org.eclipse.rse.services.processes.IProcessService;
 
 public abstract class EmulatorSubSystemConfiguration extends SubSystemConfiguration implements IEmulatorSubSystemConfiguration{
 
@@ -58,7 +59,7 @@ public abstract class EmulatorSubSystemConfiguration extends SubSystemConfigurat
 	}
 	
 	@Override
-	public IEmulatorProcessService[] getEmulatorProcessService(IHost host) {
+	public IProcessService[] getEmulatorProcessService(IHost host) {
 		
 		List matches = new ArrayList();
 		
@@ -68,14 +69,14 @@ public abstract class EmulatorSubSystemConfiguration extends SubSystemConfigurat
 			
 			if(ss instanceof IEmulatorProcessServiceSubSystem){
 				
-				IEmulatorProcessService eps = ((IEmulatorProcessServiceSubSystem) ss).getProcessService();
+				IProcessService eps = ((IEmulatorProcessServiceSubSystem) ss).getProcessService();
 				
 				matches.add(eps);
 				
 			}
 		}
 		
-		return (IEmulatorProcessService[])matches.toArray(new IEmulatorProcessService[matches.size()]);
+		return (IProcessService[])matches.toArray(new IProcessService[matches.size()]);
 		
 	}
 }

@@ -5,6 +5,7 @@ import net.izhtw.rse.subsystems.processes.emulator.local.adapter.EmulatorProcess
 import net.izhtw.rse.subsystems.processes.emulator.local.subsystem.impl.EmulatorProcessSubSystemConfiguration;
 
 import org.eclipse.rse.core.model.IHost;
+import org.eclipse.rse.core.subsystems.ISubSystem;
 import org.eclipse.rse.core.subsystems.ISubSystemConfiguration;
 import org.eclipse.rse.services.processes.IProcessService;
 import org.eclipse.rse.subsystems.processes.core.subsystem.IHostProcessToRemoteProcessAdapter;
@@ -18,12 +19,4 @@ public class SkyeyeProcessSubSystemConfiguration extends
 		return new LocalSpawnerProcessService();
 	}
 
-	@Override
-	public IHostProcessToRemoteProcessAdapter getHostProcessAdapter() {
-		if (_hostProcessAdapter == null)
-		{
-			_hostProcessAdapter =  new EmulatorProcessAdapter();
-		}
-		return _hostProcessAdapter;
-	}
 }

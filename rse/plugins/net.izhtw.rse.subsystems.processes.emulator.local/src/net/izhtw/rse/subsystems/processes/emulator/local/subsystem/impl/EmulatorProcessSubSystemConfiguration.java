@@ -26,4 +26,12 @@ public class EmulatorProcessSubSystemConfiguration extends LocalProcessSubSystem
 		
 	}
 
+	@Override
+	public IHostProcessToRemoteProcessAdapter getHostProcessAdapter() {
+		if (_hostProcessAdapter == null)
+		{
+			_hostProcessAdapter =  new EmulatorProcessAdapter();
+		}
+		return _hostProcessAdapter;
+	}
 }

@@ -7,6 +7,6 @@ import org.eclipse.rse.subsystems.processes.servicesubsystem.IProcessServiceSubS
 
 public interface IEmulatorProcessServiceSubSystem extends IProcessServiceSubSystem {
 
-	public IEmulatorProcessService getProcessService();
+	public IProcessService getProcessService();
 	
 }

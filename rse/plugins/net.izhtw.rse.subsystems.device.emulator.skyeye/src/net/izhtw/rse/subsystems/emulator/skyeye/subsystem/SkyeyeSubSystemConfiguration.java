@@ -2,6 +2,7 @@ package net.izhtw.rse.subsystems.emulator.skyeye.subsystem;
 
 import org.eclipse.rse.core.model.IHost;
 import org.eclipse.rse.core.subsystems.ISubSystem;
+import org.eclipse.rse.services.processes.IProcessService;
 
 import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
@@ -18,7 +19,7 @@ public class SkyeyeSubSystemConfiguration extends EmulatorSubSystemConfiguration
 		
 		IEmulatorService service = this.getEmulatorService(conn);
 		
-		IEmulatorProcessService[] processservice = this.getEmulatorProcessService(conn);
+		IProcessService[] processservice = this.getEmulatorProcessService(conn);
 		
 		SkyeyeSubSystem sss = new SkyeyeSubSystem(conn, getConnectorService(conn), service);
 		

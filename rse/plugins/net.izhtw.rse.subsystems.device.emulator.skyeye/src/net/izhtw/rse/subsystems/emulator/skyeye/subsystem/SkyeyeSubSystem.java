@@ -49,38 +49,6 @@ public class SkyeyeSubSystem extends SubSystem implements IEmulatorSubSystem{
 	}
 
 	@Override
-	protected Object[] internalResolveFilterString(String filterString,
-			IProgressMonitor monitor) throws InvocationTargetException,
-			InterruptedException {
-		
-		List matches = new ArrayList();
-		
-		matches.add(new Emulator("Skyeye_01"));
-		matches.add(new Emulator("Skyeye_02"));
-		matches.add(new Emulator("Skyeye_03"));
-		
-		return (Emulator[]) matches.toArray(new Emulator[matches.size()]);
-		
-		//return super.internalResolveFilterString(filterString, monitor);
-	}
-
-	@Override
-	protected Object[] internalResolveFilterString(Object parent,
-			String filterString, IProgressMonitor monitor)
-			throws InvocationTargetException, InterruptedException {
-		
-		List matches = new ArrayList();
-		
-		matches.add(new Emulator("Skyeye_01"));
-		matches.add(new Emulator("Skyeye_02"));
-		matches.add(new Emulator("Skyeye_03"));
-		
-		return (Emulator[]) matches.toArray(new Emulator[matches.size()]);
-		
-		//return super.internalResolveFilterString(parent, filterString, monitor);
-	}
-
-	@Override
 	public boolean hasChildren() {
 		return true;
 	}

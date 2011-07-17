@@ -52,8 +52,4 @@ public class EmulatorProcessServiceSubSystem extends ProcessServiceSubSystem imp
 		super.uninitializeSubSystem(monitor);
 	}
 
-	@Override
-	public IEmulatorProcessService getProcessService(){
-		return (IEmulatorProcessService) super.getProcessService();
-	}
 }
