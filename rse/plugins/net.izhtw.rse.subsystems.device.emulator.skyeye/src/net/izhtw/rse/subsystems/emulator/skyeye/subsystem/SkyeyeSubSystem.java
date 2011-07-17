@@ -1,8 +1,13 @@
 package net.izhtw.rse.subsystems.emulator.skyeye.subsystem;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
+
 import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystem;
+import net.izhtw.rse.subsystems.emulator.core.model.Emulator;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.rse.core.model.IHost;
@@ -41,6 +46,55 @@ public class SkyeyeSubSystem extends SubSystem implements IEmulatorSubSystem{
 	
 	public IEmulatorProcessService getEmulatorProcessService() {
 		return this._processserice;
+	}
+
+	@Override
+	protected Object[] internalResolveFilterString(String filterString,
+			IProgressMonitor monitor) throws InvocationTargetException,
+			InterruptedException {
+		
+		List matches = new ArrayList();
+		
+		matches.add(new Emulator("Skyeye_01"));
+		matches.add(new Emulator("Skyeye_02"));
+		matches.add(new Emulator("Skyeye_03"));
+		
+		return (Emulator[]) matches.toArray(new Emulator[matches.size()]);
+		
+		//return super.internalResolveFilterString(filterString, monitor);
+	}
+
+	@Override
+	protected Object[] internalResolveFilterString(Object parent,
+			String filterString, IProgressMonitor monitor)
+			throws InvocationTargetException, InterruptedException {
+		
+		List matches = new ArrayList();
+		
+		matches.add(new Emulator("Skyeye_01"));
+		matches.add(new Emulator("Skyeye_02"));
+		matches.add(new Emulator("Skyeye_03"));
+		
+		return (Emulator[]) matches.toArray(new Emulator[matches.size()]);
+		
+		//return super.internalResolveFilterString(parent, filterString, monitor);
+	}
+
+	@Override
+	public boolean hasChildren() {
+		return true;
+	}
+
+	@Override
+	public Object[] getChildren() {
+		
+		List matches = new ArrayList();
+		
+		matches.add(new Emulator("Skyeye_01"));
+		matches.add(new Emulator("Skyeye_02"));
+		matches.add(new Emulator("Skyeye_03"));
+		
+		return (Emulator[]) matches.toArray(new Emulator[matches.size()]);
 	}
 
 }

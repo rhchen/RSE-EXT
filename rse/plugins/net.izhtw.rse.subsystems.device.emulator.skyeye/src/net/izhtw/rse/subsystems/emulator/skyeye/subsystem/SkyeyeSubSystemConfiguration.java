@@ -31,4 +31,9 @@ public class SkyeyeSubSystemConfiguration extends EmulatorSubSystemConfiguration
 		return ISkyeyeService.class;
 	}
 
+	@Override
+	public boolean supportsFilters() {
+		return false;
+	}
+
 }
