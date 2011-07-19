@@ -11,8 +11,8 @@
             iconlive="icons/full/obj16/systemlocallive_obj.gif"
             id="qemu.emulator"
             name="Qemu Emulator"
-            priority="5000"
-            systemTypeIds="net.izhtw.rse.systemtype.qemu;org.eclipse.rse.systemtype.local"
+            priority="6000"
+            systemTypeIds="net.izhtw.rse.systemtype.qemu"
             vendor="Qemu">
       </configuration>
    </extension>

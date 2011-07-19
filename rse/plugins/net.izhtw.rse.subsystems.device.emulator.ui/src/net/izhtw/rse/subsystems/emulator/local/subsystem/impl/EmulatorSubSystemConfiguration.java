@@ -8,13 +8,16 @@ import java.util.Map;
 import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorProcessServiceSubSystem;
+import net.izhtw.rse.emulator.core.subsystems.IEmulatorProcessServiceSubSystemConfiguration;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystemConfiguration;
 import net.izhtw.rse.services.emulator.core.services.AbstractEmulatorService;
 
+import org.eclipse.rse.core.IRSESystemType;
 import org.eclipse.rse.core.RSECorePlugin;
 import org.eclipse.rse.core.model.IHost;
 import org.eclipse.rse.core.subsystems.IConnectorService;
 import org.eclipse.rse.core.subsystems.ISubSystem;
+import org.eclipse.rse.core.subsystems.ISubSystemConfiguration;
 import org.eclipse.rse.core.subsystems.SubSystemConfiguration;
 import org.eclipse.rse.internal.connectorservice.local.LocalConnectorServiceManager;
 import org.eclipse.rse.internal.services.local.ILocalService;
@@ -59,22 +62,33 @@ public abstract class EmulatorSubSystemConfiguration extends SubSystemConfigurat
 	}
 	
 	@Override
-	public IProcessService[] getEmulatorProcessService(IHost host) {
+	public IProcessService[] getEmulatorProcessService(IHost host, IRSESystemType systemType, Class clazz) {
 		
 		List matches = new ArrayList();
 		
-		ISubSystem[] ssa = RSECorePlugin.getTheSystemRegistry().getServiceSubSystems(host, IEmulatorProcessService.class);
+		ISubSystemConfiguration[] ssca = RSECorePlugin.getTheSystemRegistry().getSubSystemConfigurationsBySystemType(systemType, false, true);
 		
-		for(ISubSystem ss : ssa){
+		for(ISubSystemConfiguration ssa : ssca){
 			
-			if(ss instanceof IEmulatorProcessServiceSubSystem){
+			if(ssa instanceof IEmulatorProcessServiceSubSystemConfiguration){
 				
-				IProcessService eps = ((IEmulatorProcessServiceSubSystem) ss).getProcessService();
+				ISubSystem[] ssarray =  ssa.getSubSystems(host, true);
 				
-				matches.add(eps);
-				
+				for(ISubSystem ss : ssarray){
+					
+					if(clazz.isInstance(ss)){
+						
+						IProcessService eps = ((IEmulatorProcessServiceSubSystem) ss).getProcessService();
+						
+						matches.add(eps);
+						
+					}
+				}
 			}
+			
 		}
+		
+		//ISubSystem[] ssa = RSECorePlugin.getTheSystemRegistry().getServiceSubSystems(host, IProcessService.class);
 		
 		return (IProcessService[])matches.toArray(new IProcessService[matches.size()]);
 		

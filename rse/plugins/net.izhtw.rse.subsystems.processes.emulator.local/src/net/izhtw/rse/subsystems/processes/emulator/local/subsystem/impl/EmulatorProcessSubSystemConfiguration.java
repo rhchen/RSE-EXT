@@ -22,6 +22,8 @@ public class EmulatorProcessSubSystemConfiguration extends LocalProcessSubSystem
 		
 		ISubSystem subsys = new EmulatorProcessServiceSubSystem(host, connectorService, getProcessService(host), getHostProcessAdapter());
 		
+		//this.addSubSystem(subsys);
+		
 		return subsys;
 		
 	}

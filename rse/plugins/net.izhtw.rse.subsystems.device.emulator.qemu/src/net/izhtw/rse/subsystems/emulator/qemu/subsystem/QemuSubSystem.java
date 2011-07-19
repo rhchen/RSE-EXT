@@ -7,6 +7,7 @@ import java.util.List;
 import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystem;
+import net.izhtw.rse.services.emulator.core.services.IQemuService;
 import net.izhtw.rse.subsystems.emulator.core.model.Emulator;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -68,6 +69,11 @@ public class QemuSubSystem extends SubSystem implements IEmulatorSubSystem{
 		return (Emulator[]) matches.toArray(new Emulator[matches.size()]);
 		
 		//return super.internalResolveFilterString(parent, filterString, monitor);
+	}
+
+	@Override
+	public Class getServiceType() {
+		return IQemuService.class;
 	}
 
 }

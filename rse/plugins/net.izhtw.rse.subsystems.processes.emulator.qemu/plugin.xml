@@ -11,7 +11,7 @@
             iconlive="icons/full/obj16/processsubsystemlive_obj.gif"
             id="process.qemu"
             name="Qemu Process"
-            priority="6000"
+            priority="5000"
             systemTypeIds="net.izhtw.rse.systemtype.qemu"
             vendor="Qemu Process">
       </configuration>

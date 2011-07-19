@@ -7,6 +7,7 @@ import java.util.List;
 import net.izhtw.rse.emulator.core.services.IEmulatorProcessService;
 import net.izhtw.rse.emulator.core.services.IEmulatorService;
 import net.izhtw.rse.emulator.core.subsystems.IEmulatorSubSystem;
+import net.izhtw.rse.services.emulator.core.services.ISkyeyeService;
 import net.izhtw.rse.subsystems.emulator.core.model.Emulator;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -63,6 +64,11 @@ public class SkyeyeSubSystem extends SubSystem implements IEmulatorSubSystem{
 		matches.add(new Emulator("Skyeye_03"));
 		
 		return (Emulator[]) matches.toArray(new Emulator[matches.size()]);
+	}
+
+	@Override
+	public Class getServiceType() {
+		return ISkyeyeService.class;
 	}
 
 }
